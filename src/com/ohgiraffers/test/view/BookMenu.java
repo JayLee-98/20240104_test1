@@ -23,7 +23,7 @@ public class BookMenu {
         int receivedNum = sc.nextInt();
         sc.next();
 
-        switch(receivedNum) {
+        switch (receivedNum) {
             case 1:
                 System.out.println("추가하고자하는 책의 이름을 입력해주세요 : ");
                 String str = sc.nextLine();
@@ -32,6 +32,7 @@ public class BookMenu {
                 addBM.addBook(str);
 
                 break;
+
             case 2:
                 System.out.println("삭제하고자하는 책의 도서 번호을 입력해주세요 : ");
                 int deleteBookNum = sc.nextInt();
@@ -39,33 +40,34 @@ public class BookMenu {
                 deleteBM.deleteBook(deleteBookNum);
 
                 break;
+
             case 3:
                 System.out.println("검색을 원하시는 도서 제목을 입력해주세요 : ");
                 String searchBookName = sc.nextLine();
                 BookManager searchBM = new BookManager();
                 searchBM.searchBook(searchBookName);
                 break;
+
             case 9:
+                System.out.println("프로그램을 종료합니다.");
                 break;
-            default :
+
+            default:
                 System.out.println("잘못된 번호를 입력하셨습니다. 올바른 번호를 다시 선택해주십쇼.");
                 return;
-
-
         }
 
     }
 
-//    public BookDTO inputBook() {
-//
-//    }
+    public BookDTO inputBook() {
+        String inquiry = bm.toString();
+        return inquiry;
+    }
 
-//    public String inputBookTitle() {
-//
-//    }
+    public String inputBookTitle() {
 
-
-
+    }
 
 
 }
+

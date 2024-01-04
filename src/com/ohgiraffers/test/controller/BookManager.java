@@ -6,15 +6,12 @@ import com.ohgiraffers.test.view.BookMenu;
 public class BookManager {
 
     BookDTO[] bookdto = new BookDTO[4];
-    bookdto[0] = new BookDTO();
-    bookdto[1] = new BookDTO();
-    bookdto[2] = new BookDTO();
-    bookdto[3] = new BookDTO();
-
+    bookdto[] = new BookDTO(); //  변수명[인덱스 값] = new연산자 클래스명 ()
 
 
     public void addBook(BookDTO book) {
-        book.setTitle();
+
+        bookdto[] = BookDTO.setTitle();
     }
 
     public void deleteBook(int index) {
@@ -22,8 +19,7 @@ public class BookManager {
     }
 
     public int searchBook(int index) {
-        BookDTO.toString;
-        return ;
+        return BookDTO.toString;;
     }
 
     public void displayAll() {
